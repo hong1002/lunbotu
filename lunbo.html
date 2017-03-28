@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>轮播图</title>
+    <style media="screen">
+        .lunbo {
+            position: relative;
+            width: 790px;
+            height: 340px;
+            margin: auto;
+        }
+        .hs-lunbo-img {
+            display: none;
+            width: 100%;
+            height: 100%;
+        }
+        .hs-active {
+            display: inline-block;
+        }
+        .hs-lunbo-button {
+            position: absolute;
+            top: 50%;
+            height: 60px;
+            width: 30px;
+            border: none;
+            background: black;
+            opacity: 0.2;
+            color: white;
+        }
+        .hs-lunbo-button:hover {
+            opacity: 0.6;
+        }
+
+        .hs-right {
+            right: 0;
+        }
+        .hs-left {
+            left: 0;
+        }
+        .hs-vertical-center {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .hs-lunbo-indicators {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .hs-lunbo-indi {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: white;
+        }
+        .hs-red {
+            background: red;
+        }
+    </style>
+    <script src=hs.js></script>
+  </head>
+  <body>
+      <div class="lunbo" data-imgs=3 data-active=0>
+          <img id="id-lunbo-0" class="hs-lunbo-img hs-active" src="1.jpg" alt="">
+          <img id="id-lunbo-1" class="hs-lunbo-img" src="2.jpg" alt="">
+          <img id="id-lunbo-2" class="hs-lunbo-img" src="3.jpg" alt="">
+          <button class="hs-lunbo-button hs-right hs-vertical-center" data-next=1>></button>
+          <button class="hs-lunbo-button hs-left hs-vertical-center" data-next=-1><</button>
+          <div class="hs-lunbo-indicators">
+              <div id="id-indi-0" data-img=0 class="hs-lunbo-indi hs-red"></div>
+              <div id="id-indi-1" data-img=1 class="hs-lunbo-indi"></div>
+              <div id="id-indi-2" data-img=2 class="hs-lunbo-indi"></div>
+          </div>
+      </div>
+      <script src=lunbo.js></script>
+  </body>
+</html>
